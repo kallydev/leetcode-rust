@@ -2,14 +2,18 @@ use crate::solutions::Solution;
 
 impl Solution {
     pub fn is_palindrome(x: i32) -> bool {
-        if x.is_negative() {
+        if x.is_negative() || (x != 0 && x % 10 == 0) {
             return false;
         }
 
-        let origin = x.to_string();
-        let reserved = origin.chars().rev().collect::<String>();
+        let (mut x, mut half) = (x, 0);
 
-        origin == reserved
+        while x > half {
+            half = half * 10 + (x % 10);
+            x /= 10;
+        }
+
+        x == half || x == half / 10
     }
 }
 
