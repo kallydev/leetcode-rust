@@ -3,6 +3,7 @@ pub mod _0009_palindrome_number;
 pub mod _0020_valid_parentheses;
 pub mod _0026_remove_duplicates_from_sorted_array;
 pub mod _0027_remove_element;
+pub mod _0042_trapping_rain_water;
 pub mod _0929_unique_email_addresses;
 pub mod _1848_minimum_distance_to_the_target_element;
 pub mod _2351_first_letter_to_appear_twice;
